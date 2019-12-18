@@ -4,6 +4,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class BufferedOutputStreamTest {
     public static void main(String[] args) throws IOException {
@@ -11,7 +12,8 @@ public class BufferedOutputStreamTest {
         if (!file.exists()){
             file.createNewFile();
         }
-        String s="asdafdfsfvvxcgfhjkmndsfbcjgfdseroiutjklfjesd";
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
         byte []b=s.getBytes();
         BufferedOutputStream bo=new BufferedOutputStream(new FileOutputStream(file));
         for (int i = 0; i < b.length/3; i++) {
