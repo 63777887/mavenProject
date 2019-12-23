@@ -29,6 +29,7 @@ public class MyHandler extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+        System.out.println("开始解析"+qName);
         if (qName!=null){
             s=qName;
             if (qName.equals("Student")){
