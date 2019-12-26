@@ -1,4 +1,4 @@
-package understandMaven.example.Test1.Worker;
+package understandMaven.example.test1.Worker;
 
 import java.util.HashSet;
 import java.util.Objects;

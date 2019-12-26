@@ -1,4 +1,4 @@
-package understandMaven.example.Test1.work;
+package understandMaven.example.test1.work;
 
 import java.util.ArrayList;
 import java.util.Iterator;

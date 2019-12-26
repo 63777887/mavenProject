@@ -11,8 +11,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(int id, String name, int score, String address, String date) {
-        this.id = id;
+    public Student( String name, int score, String address, String date) {
         this.name = name;
         this.score = score;
         this.address = address;

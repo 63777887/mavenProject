@@ -41,7 +41,6 @@ public class jdbc01 {
 
 
 
-
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }finally {

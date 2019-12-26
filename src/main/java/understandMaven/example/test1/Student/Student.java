@@ -1,4 +1,4 @@
-package understandMaven.example.Test1.Student;
+package understandMaven.example.test1.Student;
 
 public class Student {
     private  int number;
