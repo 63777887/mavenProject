@@ -1,9 +1,9 @@
 package understandMaven.example.generictyTest;
 
-public class GenerictyInterface<T extends Number> {
+public class Genericty1<T extends Number> {
     private T []arr;
 
-    public GenerictyInterface(T[] arr) {
+    public Genericty1(T[] arr) {
         this.arr = arr;
     }
 

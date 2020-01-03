@@ -14,8 +14,9 @@ public class Dynamicproxy implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         //执行代理目标的方法
-        System.out.println("hahaha");
+
         method.invoke(object,args);
+        System.out.println("我添加了一个功能");
 
 
         return null;
