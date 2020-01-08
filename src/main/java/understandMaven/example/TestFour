@@ -41,7 +41,7 @@ Url:understandMaven/example/i.png
 
 5.如何通过反射获取和设置对象私有字段的值？
         获取一个字段的值
-      ``` try {
+       try {
             Field f=Object.class.getDeclaredField("String");
             f.setAccessible(true);
             System.out.println(f.get(new Object()));
@@ -61,7 +61,7 @@ Url:understandMaven/example/i.png
                         }
                         获取私有方法
         Method m=Person.class.getDeclaredMethod("getAge",null);
-                                            m.setAccessible(true);
-                                            System.out.println(m.invoke(new Person(),null));```
+            m.setAccessible(true);
+            System.out.println(m.invoke(new Person(),null));
         
         
