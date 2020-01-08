@@ -3,25 +3,25 @@ package understandMaven.example;
 import java.io.Serializable;
 
 public class Person implements Serializable {
-    private String name;
-    private int age;
+    private String name="亚索";
+    private int age=5;
 
     public Person() {
     }
 
-    public String getName() {
+    private String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
     }
 
-    public int getAge() {
+    private int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    private void setAge(int age) {
         this.age = age;
     }
 

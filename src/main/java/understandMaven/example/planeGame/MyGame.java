@@ -8,7 +8,7 @@ import java.io.File;
 
 public class MyGame extends JFrame {
     File file=new File("/Users/edz/project/mavenProject/src/main/java/understandMaven/example/planeGame/image/feiji.jpg");
-        Image ball=GameUtil.getImage(file);
+//        Image ball=GameUtil.getImage(file);
     @Override
     public void paint(Graphics g) {     //自动调用  g相当于一支画笔
         Color c=g.getColor();
@@ -21,12 +21,11 @@ public class MyGame extends JFrame {
         g.setColor(Color.red);
         g.setFont(new Font("宋体",Font.BOLD,30));
         g.drawString("我是谁?",200,200);
-
-
-        g.drawImage(ball,10,10,null);
+//        g.drawImage(ball,10,10,null);
 
         g.setColor(c);
         g.setFont(f);
+        login.setIcon(new ImageIcon("understandMaven/example/planeGame/image/feiji.jpg"));
 
     }
 
@@ -50,5 +49,5 @@ public class MyGame extends JFrame {
         MyGame myGame=new MyGame();
         myGame.lunchFrame();
     }
-
+    private JButton login;
 }
