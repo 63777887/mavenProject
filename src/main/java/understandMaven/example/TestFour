@@ -63,5 +63,122 @@ Url:understandMaven/example/i.png
         Method m=Person.class.getDeclaredMethod("getAge",null);
             m.setAccessible(true);
             System.out.println(m.invoke(new Person(),null));
-        
-        
+
+6.你对设计模式的理解
+设计模式, 则是在(常见)指定的需求及条件下, 有经验的人总结出来的一种解决特定问题的方法.
+
+7.分析QUEUE集合,请用两个队列模拟堆栈结构（队列是先进先出，而堆栈是先进后出）
+Queue<String> queue = new LinkedList<String>(); // a 队列
+		Queue<String> queue2 = new LinkedList<String>(); // b 队列
+		ArrayList<String> a = new ArrayList<String>(); // arrylist 集合是中间参数
+		// 往 a 队列添加元素
+		queue.offer("a");
+		queue.offer("b");
+		queue.offer("c");
+		queue.offer("d");
+		queue.offer("e");
+		System.out.print("进栈：");
+		// a 队列依次加入 list 集合之中
+		for (String q : queue) {
+			a.add(q);
+			System.out.print(q);
+		}
+		// 以倒序的方法取出（a 队列依次加入 list 集合）之中的值，加入 b 对列
+		for (int i = a.size() - 1; i >= 0; i--) {
+			queue2.offer(a.get(i));
+		}
+		// 打印出栈队列
+		System.out.println("");
+		System.out.print("出栈：");
+
+
+		for (String q : queue2) {
+			System.out.print(q);
+		}
+
+
+8.下面运行的结果
+ public static void main(String[] args) {
+     String str1 = "hello";
+     String str2 = "he" + new String("llo");
+     String str3 = "he" + "llo";
+     System.err.println(str1 == str2);
+     System.err.println(str1 == str3);
+ }
+
+第一个是重新new了一个，所以地址不一样，第二个是StringBuilder的append方法，是同一个
+
+
+9.为什么要实现Collection接口而不是继承呢？
+java支持实现多接口，但只能单线程。接口封装性更好
+
+
+10.设有一个二维数组 A[m][n]，假设A[0][0]存放的位置在 644（10），A[2][2]存放的文职在676（10）每个元素占一个空间，
+问 A[3][3]（10）存放在什么位置? 脚注（10）表示用 10进制表示（ C ）
+A.688
+B.678
+C.692
+D.699
+
+
+11.下面代码执行结果：
+public static void main(String args[]) {
+    Thread t = new Thread() {
+        public void run() {
+            pong();
+        }
+    };
+    t.run();
+    System.out.print("ping");
+}
+static void pong() {
+    System.out.print("pong");
+}
+
+pongping
+
+
+13.下面代码输出的结果
+static boolean foo(char c) {
+    System.out.print(c);
+    return true;
+}
+
+public static void main(String[] args) {
+    int i = 0;
+    for (foo('A'); foo('B') && (i < 2); foo('C')) {
+        i++;
+        foo('D');
+    }
+}
+
+ABDCBDCB
+
+
+14.求出结果
+class Foo {
+    public static void main(String args[]) {
+        try {
+            return;
+        } finally {
+            System.out.println("Finally");
+        }
+    }
+}
+
+Finally
+
+15.写出对java项目进行打包的命令,并且执行包里面的程序
+
+16.线程类的构造方法、静态块是被哪个线程调用的
+线程类的构造方法
+静态块是被new这个线程类所在的线程所调用的
+而run方法里面的代码才是被线程自身所调用的
+
+17.数据库如果有千万级数据，你如何提高查询效率
+对查询进行优化，应尽量避免全表扫描，首先应考虑在 where 及 order by 涉及的列上建立索引。
+尽可能的使用 varchar/nvarchar 代替 char/nchar
+a. 应尽量避免在 where 子句中使用!=或<>操作符，否则将引擎放弃使用索引而进行全表扫描。
+b. 应尽量避免在 where 子句中使用 or 来连接条件，否则将导致引擎放弃使用索引而进行全表扫描
+
+18.说说你在做项目的时候，对数据库的优化有哪些？

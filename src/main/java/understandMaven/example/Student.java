@@ -44,22 +44,38 @@ public class Student {
                 '}';
     }
 
-    public static void main(String[] args) {
-        try {
-            Field []f=Person.class.getDeclaredFields();
-            Method m=Person.class.getDeclaredMethod("getAge",null);
-            m.setAccessible(true);
-            System.out.println(m.invoke(new Person(),null));
-            for (Field p :
-                    f) {
-                p.setAccessible(true);
-                System.out.println(p.get(new Person()));
+    //    public static void main(String[] args) {
+//        try {
+//            Field []f=Person.class.getDeclaredFields();
+//            Method m=Person.class.getDeclaredMethod("getAge",null);
+//            m.setAccessible(true);
+//            System.out.println(m.invoke(new Person(),null));
+//            for (Field p : f) {
+//                p.setAccessible(true);
+//                System.out.println(p.get(new Person()));
+//            }
+//            } catch (IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
+//                e.printStackTrace();
+//            }
+//        int m = 9,n=15;
+//       int [][]arr=new int[m][n];
+//       int count=644;
+//       for (int i=0;i<m;i++){
+//           for (int j=0;j<n;j++){
+//               arr[i][j]=count;
+//               count++;
+//           }
+//       }
+//        System.out.println(arr[2][2]);
+//        System.out.println(arr[3][3]);
+//        }
+//}
+    static class Foo {
+        public static void main(String args[]) {
+            try {
+                return;
+            } finally {
+                System.out.println("Finally");
             }
-            } catch (IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
-                e.printStackTrace();
-            }
-
-
-
         }
-}
+    }}
